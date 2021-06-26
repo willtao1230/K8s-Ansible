@@ -16,9 +16,6 @@
 - name: 创建目录
   file: dest=/etc/docker state=directory
 
-- name: 配置docker
-  copy: src=daemon.json dest=/etc/docker/daemon.json
-
 - name: 启动docker
   systemd: name=docker state=restarted enabled=yes daemon_reload=yes
 
