@@ -1,7 +1,4 @@
 ---
-- name: 创建临时目录
-  file: dest={{ tmp_dir }} state=directory
-
 - name: 安装keepalived高可用软件
   apt: name=keepalived state=present
 
